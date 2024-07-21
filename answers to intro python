@@ -1,0 +1,224 @@
+1. Python Basics
+Python is defined as an open-source, high-level, object-oriented, general purpose programming language.
+Python's most noticeable features, include:
+-Its intuitive syntax is similar to English making it easy to learn, especially for beginners.
+-It being human-friendly makes it easy to read, write and debug.
+-It is free for individuals and businesses.
+-It is constantly developed, improved, and expanded because it supports a huge community.
+- It has the ability to be integrated into any project and it can be used to solve complex problems.
+Examples of uses of Python:
+- Data Analysis, where it provides modules designed for analytical purpose.
+-Web Development, where it is used for common frameworks that have modules that enables data 
+sharing.
+-Task Automation/Scripting, where it is used as a tool of automation for repetitive tasks.
+
+2. Installing Python on Windows.
+Here are the steps:
+-Visit the Python on https://www.python.org/downloads/ link.
+-Select the latest version of Python 3 to download.
+-Select the executable installer that matches your system architecture to download.
+-Once downloaded, open the .exe file run the downloaded installer and follow the prompts to install Python.
+-Select the option to add Python to your PATH during the installation process.
+-To verify install, open a Command Prompt window and run command python --version.
+-To set up a virtual environment, run command python -m venv myvenv(use your prefered environment name) on
+Command Prompt.
+-To activate the environment run command my_venv\Scripts\activate.bat.
+
+3. Python Syntax and Semantics
+The Python program that prints "Hello, World!" is print("Hello, World!"). The print() function in Python is
+a built-in function that is used to output text to the console.  A sequence of characters enclosed in quotes
+is a string literal, so "Hello, World" is a string.
+
+4. Data Types and Variables:
+The common data types are:
+-Integers 'int', represents whole numbers, positive or negative, without a decimal point.
+-Floats float', represents numbers that have a decimal point.
+-Strings 'str', represents a sequence of characters, it is used to represent text.
+-Booleans 'bool', represents logical values that can be either True or False.
+-Lists 'list', represents ordered collection of items, which can be of different types.
+-Tuples 'tuple', represents ordered, immutable collection of items.
+-Dictionaries 'dict', represents collection of key-value pairs.
+-Sets 'set', represents unordered collection of unique items.
+
+Script representing different data types
+
+Integer
+age = 30
+print(f"Age: {age}, Type: {type(age)}")
+
+Float
+height = 5.8
+print(f"Height: {height}, Type: {type(height)}")
+
+String
+name = "Elona"
+print(f"Name: {name}, Type: {type(name)}")
+
+Boolean
+is_student = True
+print(f"Is Student: {is_student}, Type: {type(is_student)}")
+
+List
+hobbies = ["reading", "coding", "hiking"]
+print(f"Hobbies: {hobbies}, Type: {type(hobbies)}")
+
+Tuple
+coordinates = (40.7128, -74.0060)
+print(f"Coordinates: {coordinates}, Type: {type(coordinates)}")
+
+Dictionary
+person = {"name": "Elona", "age": 30, "height": 5.8}
+print(f"Person: {person}, Type: {type(person)}")
+
+Set
+unique_numbers = {1, 2, 3, 4, 5}
+print(f"Unique Numbers: {unique_numbers}, Type: {type(unique_numbers)}")
+
+5. Control Structures
+Conditionals statements otherwise known as ''if-else statements allow programs
+to execute blocks of code based on particular conditions. For example:
+number = 10
+if number > 0:
+    print("The number is positive.")
+else:
+    print("The number is non-positive.")
+
+Loops also known as 'for' loop allows you to execute a block of code multiple 
+times. For example:
+fruits = ["apple", "banana", "cherry"]
+
+for fruit in fruits:
+    print(fruit)
+
+6. Functions in Python
+-Python promotes code reusability in this you can write a function once and 
+be able to reuse it more than once.
+-It improves code readability in this functions help to organize code into
+logical bit.
+-It simplifies debugging and maintenance so you can isolate problems to specific 
+functions.
+-It encapsulates complexity, because functions tend to hide complex logic,
+it exposes a simpler interface.
+Here's an example:
+def sum_numbers(x, y):
+  return x + y
+
+result = sum_numbers(5, 3)
+print(result)  # Output: 8
+
+7. Lists and Dictionaries
+Lists vs Dictionaries
+-Elements in a list maintain the order they are added while in dictionaries they are 
+stored a key-value pairs and do not have to maintain a particular order.
+-Elements in a list can be accessed by their position on the list while in dictionaries 
+they are accessed using unique keys.
+-Elements in a list are defined by square brackets[] while in dictionaries they are 
+defined by curly brackets{}
+
+Creating a list of numbers:
+numbers = [1, 2, 3, 4, 5]
+
+Creating a dictionary with key-value pairs:
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+Basic operations on the list:
+-Accessing elements
+print("First number:", numbers[0])
+
+-Adding elements
+numbers.append(6)
+print("List after appending 6:", numbers)
+
+-Removing elements
+numbers.remove(3)
+print("List after removing 3:", numbers)
+
+-Updating elements
+numbers[1] = 10
+print("List after updating the second element to 10:", numbers)
+
+Basic operations on the dictionary:
+-Accessing values by key
+print("Name:", person["name"])
+
+-Adding key-value pairs
+person["occupation"] = "Engineer"
+print("Dictionary after adding occupation:", person)
+
+-Removing key-value pairs
+del person["age"]
+print("Dictionary after removing age:", person)
+
+-Updating values
+person["city"] = "San Francisco"
+print("Dictionary after updating city:", person)
+
+8. Exception Handling
+In Python it is a mechanism used to handle errors without halting
+that the program execution.
+
+Python Script:
+try:  
+   x = 5 / 0  
+except ZeroDivisionError:   
+   print("Error: Division by zero is not allowed!")  
+finally:   
+   print("Program execution continues...") 
+
+9. Modules and Packages
+ A module is a file that contains Python definitions and statements.
+It allows you to logically organize your Python code. It also can 
+define functions, classes, and variables that can be reused across 
+your program.
+A package allows to organize related modules into a directory hierarchy.
+It has a special file named __init__.py that can shows that the directory
+is a package.
+To import you can use the import statement.
+example of the math module:
+import math  
+
+10.
+Reading from files
+To read from a file in Python, you use the open() function in conjunction 
+with read() function.
+
+Writing to a File
+To write to a file, use the open() function with 'w' or 'a' and then use
+methods like write() to write data to the file.
+
+Script that reads the content of a file and prints it to the console:
+def read_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            content = file.read()
+            print(content)
+    except FileNotFoundError:
+        print(f"Error: File '{filename}' not found.")
+
+# Example usage:
+read_file('example.txt')
+
+Script that writes a list of strings to a file:
+def write_to_file(filename, lines):
+    try:
+        with open(filename, 'w') as file:
+            for line in lines:
+                file.write(line + '\n')
+        print(f"Successfully wrote {len(lines)} lines to '{filename}'.")
+    except IOError:
+        print(f"Error writing to file '{filename}'.")
+
+# Example usage:
+lines_to_write = ["Line 1", "Line 2", "Line 3"]
+write_to_file('output.txt', lines_to_write) 
+
+Information Reference List:
+
+https://www.datacamp.com/blog/what-is-python-used-for
+https://www.geeksforgeeks.org/how-to-install-python-on-windows/
+https://www.geeksforgeeks.org/difference-between-list-and-dictionary-in-python/
+https://www.geeksforgeeks.org/try-except-else-and-finally-in-python/
